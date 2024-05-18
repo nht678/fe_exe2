@@ -13,8 +13,9 @@ import TutorLayout from "layouts/Tutor.js"; // Make sure to create this layout
 import Login from "components/login.js"
 import Register from "components/register"
 import Homepage from "components/Homepage/Homepage.jsx"
-import Pronounce1 from "components/Pronounce1/Pronounce1.jsx"
+
 import App from "components/test voice/App.js"
+import AIProununciationTrainer from "components/pronouce2/templates/main.jsx"
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -23,8 +24,9 @@ root.render(
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/homepage" element={<Homepage />} />
-      <Route path="/pronounce" element={<Pronounce1 />} />
+
       <Route path="/test" element={<App />} />
+      <Route path="test1" element={<AIProununciationTrainer />} />
 
 
       <Route path="/admin/*" element={<AdminLayout />} />
