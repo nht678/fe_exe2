@@ -11,6 +11,7 @@ import UserPaymentForm from "views/users/payment.js"
 import GrammarForm from "views/users/grammar.js"
 import MeetingForm from "views/users/meet.js"
 import VoiceForm from "views/users/voice.js"
+import LearningHistoryFrom from "views/users/learninghistory.js"
 
 
 var userRoutes = [
@@ -83,6 +84,14 @@ var userRoutes = [
     name: "",
     icon: "ni ni-bullet-list-67 text-red",
     component: <VoiceForm />,
+    layout: "/user",
+  },
+
+  {
+    path: "/history",
+    name: "Learning history",
+    icon: "ni ni-bullet-list-67 text-red",
+    component: <LearningHistoryFrom />,
     layout: "/user",
   },
 

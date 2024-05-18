@@ -14,6 +14,8 @@ import AdminPaymentForm from "views/admin/payment.js";
 import AdminWithdrawForm from "views/admin/widthdraw.js";
 import TutorListForm from "views/admin/tutors.js";
 import UserListForm from "views/admin/users.js";
+import AdminLearningHistoryFrom from "views/admin/learninghistory.js"
+
 var adminRoutes = [
   {
     path: "/new-dashboard",
@@ -77,6 +79,13 @@ var adminRoutes = [
     name: "Tutor Withdraw",
     icon: "ni ni-bullet-list-67 text-red",
     component: <AdminWithdrawForm />,
+    layout: "/admin",
+  },
+  {
+    path: "/history",
+    name: "History",
+    icon: "ni ni-bullet-list-67 text-red",
+    component: <AdminLearningHistoryFrom />,
     layout: "/admin",
   },
   

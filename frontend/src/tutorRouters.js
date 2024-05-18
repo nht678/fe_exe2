@@ -10,6 +10,8 @@ import NewDashboard from "views/examples/NewDashboard.js";
 import CVForm from "views/tutors/cv.js"
 import MeetingForm from 'views/tutors/meeting.js' 
 import TutorWithdrawForm from "views/tutors/payment";
+import TutorLearningHistoryFrom from "views/tutors/leaninghistory.js"
+
 var tutorRoutes = [
   {
     path: "/new-dashboard",
@@ -66,6 +68,13 @@ var tutorRoutes = [
     name: "Withdraw",
     icon: "ni ni-bullet-list-67 text-red",
     component: <TutorWithdrawForm />,
+    layout: "/tutor",
+  },
+  {
+    path: "/history",
+    name: "Learning History",
+    icon: "ni ni-bullet-list-67 text-red",
+    component: <TutorLearningHistoryFrom />,
     layout: "/tutor",
   },
 ];

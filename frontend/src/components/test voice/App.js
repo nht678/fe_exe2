@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios'; // Thêm dòng này
-// import './App.css';
+import './App.css';
 import { useIsMobile, useIsOssrsNet } from "./utils";
 import { useDebugPanel } from "./debugPanel";
 import { useRobotInitiator } from "./robotInitiator";
@@ -124,9 +124,11 @@ function AppImpl({ info, verbose, robot, robotReady, stageUUID, playerRef }) {
 
         apiClient.post(`/upload/?sid=${stageUUID}&robot=${robot.uuid}&umi=${userMayInput}`, formData)
           .then(response => {
-            verbose(`ASR: Upload success: ${response.data.rid} ${response.data.asr}`);
-            info('user', `${response.data.asr}`);
-            resolve(response.data.rid);
+            console.log("Uploaddddd response data:", response.data);
+
+            verbose(`ASR: Upload success: ${response.data.data.rid} ${response.data.data.asr}`);
+            info('user', `${response.data.data.asr}`);
+            resolve(response.data.data.rid);
           }).catch((error) => reject(error));
       });
 
@@ -138,11 +140,11 @@ function AppImpl({ info, verbose, robot, robotReady, stageUUID, playerRef }) {
           const resp = await new Promise((resolve, reject) => {
             apiClient.post(`/query/?sid=${stageUUID}&rid=${requestUUID}`)
               .then(response => {
-                if (response?.data?.asid) {
-                  verbose(`TTS: Audio ready: ${response.data.asid} ${response.data.tts}`);
-                  info('bot', `${response.data.tts}`);
+                if (response?.data?.data.asid) {
+                  verbose(`TTS: Audio ready: ${response.data.data.asid} ${response.data.data.tts}`);
+                  info('bot', `${response.data.data.tts}`);
                 }
-                resolve(response.data);
+                resolve(response.data.data);
               }).catch(error => reject(error));
           });
 
