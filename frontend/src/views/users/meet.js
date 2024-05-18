@@ -11,7 +11,7 @@ const MeetingForm = () => {
       <Container className="mt--7" fluid>
         <Row>
           <div className="col">
-          <Card className="shadow border-0" style={{ minHeight: '500px' }}>
+          <Card className="shadow border-0" style={{ minHeight: '680px', borderRadius: '40px' }}>
               <Meet />
             </Card>
           </div>
