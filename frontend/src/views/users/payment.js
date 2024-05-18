@@ -11,7 +11,7 @@ const UserPaymentForm = () => {
       <Container className="mt--7" fluid>
         <Row>
           <div className="col">
-          <Card className="shadow border-0" style={{ minHeight: '500px' }}>
+            <Card className="shadow border-0" style={{ minHeight: '500px' }}>
               <UserPayment />
             </Card>
           </div>
