@@ -5,7 +5,8 @@ import { jwtDecode } from 'jwt-decode';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from 'react-bootstrap/Button';
-import PaymentProfileCard from '../ProfileCard/PaymentProfileCard.jsx';
+import PaymentProfileCard from '../ProfileCard/PaymentProfileCard';
+import QuickStart from 'components/ProfileCard/QuickStart';
 
 function Meet() {
   const [username, setUsername] = useState('');
@@ -84,9 +85,9 @@ function Meet() {
         }
       `}</style>
       <Row >
-        <Col style={{ justifyContent: "center", top: "10rem", display: "flex" }} md={8}>
+        <Col style={{ justifyContent: "center", top: "20rem", display: "flex"}} md={8}>
           <div>
-            {!loading && <Button variant="outline-primary" onClick={startConnection}>Start</Button>}
+            {!loading && <Button  variant="outline-primary" onClick={startConnection}>Start</Button>}
             {loading &&
               <>
                 <Row style={{ marginBottom: "1rem" }} className="loader"></Row>
@@ -96,12 +97,17 @@ function Meet() {
             }
           </div>
         </Col>
-        <Col md={4}>
-          <div style={{ height: "50px" }}>
-            <PaymentProfileCard 
+        <Col md={4} style={{display: "flex", flexDirection:'column'}}>
+            <div>
+            <PaymentProfileCard
+              avatar="https://png.pngtree.com/png-vector/20231019/ourmid/pngtree-user-profile-avatar-png-image_10211467.png"
+              name="Annie Leonchart"
+              email="annie_leonchart@mail.com"
+              lessons={24}
+              credits="$1"
             />
-            <div></div>
           </div>
+          <div><QuickStart/></div>
         </Col>
       </Row>
     </div>
