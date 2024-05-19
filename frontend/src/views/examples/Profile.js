@@ -317,22 +317,22 @@ const Profile = () => {
                           />
                         </FormGroup>
                       </Col>
-                      {/* <Col lg="4">
+                      <Col lg="4">
                         <FormGroup>
                           <label
                             className="form-control-label"
-                            htmlFor="input-country"
+                            htmlFor="input-nameNK"
                           >
-                            Postal code
+                            Tên ngân hàng
                           </label>
                           <Input
                             className="form-control-alternative"
-                            id="input-postal-code"
-                            placeholder="Postal code"
-                            type="number"
+                            id="input-nameNK"
+                            defaultValue="BIDV"
+                            type="text"
                           />
                         </FormGroup>
-                      </Col> */}
+                      </Col>
                     </Row>
                   </div>
                   <hr className="my-4" />
@@ -351,6 +351,7 @@ const Profile = () => {
                       />
                     </FormGroup>
                   </div>
+                  <Button>Submit</Button>
                 </Form>
               </CardBody>
             </Card>

@@ -4,6 +4,10 @@ import './App.css';
 import { useIsMobile, useIsOssrsNet } from "./utils";
 import { useDebugPanel } from "./debugPanel";
 import { useRobotInitiator } from "./robotInitiator";
+import { Col, Row } from 'antd';
+import { Avatar, Space, Image } from 'antd';
+import { UserOutlined } from '@ant-design/icons';
+import CardProfile from '../CardProfile/CardProfile.jsx';
 
 // Tạo một instance của axios với baseURL là 'http://localhost:8081/api/ai-talk/'
 const apiClient = axios.create({
@@ -293,7 +297,7 @@ function AppImpl({ info, verbose, robot, robotReady, stageUUID, playerRef }) {
       onTouchEnd={stopRecording}
       disabled={!robotReady || processing}>
       {robotReady && !processing && <div>
-        <div className='mc-text'>
+        <div className='mc-text' style={{ color: "blue" }}>
           {!talking ? <span>{isMobile ? 'Press to talk!' : 'Press the R key or SPACE to talk!'}</span> : <span>&nbsp;</span>}
         </div>
         <div className={micWorking ? 'gn-active' : 'gn'}>

@@ -91,7 +91,7 @@ function Meet() {
         }
       `}</style>
       <Row >
-        <Col span={19} style={{ justifyContent: "center", top: "10rem", display: "flex" }} >
+        <Col span={18} style={{ justifyContent: "center", top: "10rem", display: "flex" }} >
           <div>
             {!loading && <Button variant="outline-primary" onClick={startConnection}>Start</Button>}
             {loading &&
@@ -175,7 +175,6 @@ function Meet() {
 
           </div>
         </Col> */}
-        {/* <CardProfile /> */}
       </Row>
     </div>
 
