@@ -31,8 +31,40 @@ import {
 } from "reactstrap";
 // core components
 import UserHeader from "components/Headers/UserHeader.js";
+import React, { useState } from 'react';
+import { Upload } from 'antd';
+import ImgCrop from 'antd-img-crop';
+
+
+
 
 const Profile = () => {
+
+  const [fileList, setFileList] = useState([
+    // {
+    //   uid: '-1',
+    //   name: 'image.png',
+    //   status: 'done',
+    //   url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+    // },
+  ]);
+  const onChange = ({ fileList: newFileList }) => {
+    setFileList(newFileList);
+  };
+  const onPreview = async (file) => {
+    let src = file.url;
+    if (!src) {
+      src = await new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file.originFileObj);
+        reader.onload = () => resolve(reader.result);
+      });
+    }
+    const image = new Image();
+    image.src = src;
+    const imgWindow = window.open(src);
+    imgWindow?.document.write(image.outerHTML);
+  };
   return (
     <>
       <UserHeader />
@@ -40,7 +72,7 @@ const Profile = () => {
       <Container className="mt--7" fluid>
         <Row>
           <Col className="order-xl-2 mb-5 mb-xl-0" xl="4">
-            <Card className="card-profile shadow">
+            {/* <Card className="card-profile shadow">
               <Row className="justify-content-center">
                 <Col className="order-lg-2" lg="3">
                   <div className="card-profile-image">
@@ -123,24 +155,27 @@ const Profile = () => {
                   </a>
                 </div>
               </CardBody>
-            </Card>
+            </Card> */}
           </Col>
           <Col className="order-xl-1" xl="8">
             <Card className="bg-secondary shadow">
               <CardHeader className="bg-white border-0">
                 <Row className="align-items-center">
-                  <Col xs="8">
+                  <Col xs="10">
                     <h3 className="mb-0">My account</h3>
                   </Col>
-                  <Col className="text-right" xs="4">
-                    <Button
-                      color="primary"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                      size="sm"
-                    >
-                      Settings
-                    </Button>
+                  <Col className="text-right" xs="2">
+                    <ImgCrop rotationSlider>
+                      <Upload
+                        action="https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload"
+                        listType="picture-card"
+                        fileList={fileList}
+                        onChange={onChange}
+                        onPreview={onPreview}
+                      >
+                        {fileList.length < 1 && '+ Upload'}
+                      </Upload>
+                    </ImgCrop>
                   </Col>
                 </Row>
               </CardHeader>
@@ -252,15 +287,15 @@ const Profile = () => {
                         <FormGroup>
                           <label
                             className="form-control-label"
-                            htmlFor="input-city"
+                            htmlFor="input-phone"
                           >
-                            City
+                            Phone
                           </label>
                           <Input
                             className="form-control-alternative"
-                            defaultValue="New York"
-                            id="input-city"
-                            placeholder="City"
+                            defaultValue="099999999"
+                            id="input-phone"
+                            placeholder="phỏne"
                             type="text"
                           />
                         </FormGroup>
@@ -269,20 +304,20 @@ const Profile = () => {
                         <FormGroup>
                           <label
                             className="form-control-label"
-                            htmlFor="input-country"
+                            htmlFor="input-stk"
                           >
-                            Country
+                            Số tài khoản(BIDV)
                           </label>
                           <Input
                             className="form-control-alternative"
-                            defaultValue="United States"
-                            id="input-country"
-                            placeholder="Country"
+                            defaultValue="676679"
+                            id="input-stk"
+                            placeholder=""
                             type="text"
                           />
                         </FormGroup>
                       </Col>
-                      <Col lg="4">
+                      {/* <Col lg="4">
                         <FormGroup>
                           <label
                             className="form-control-label"
@@ -297,7 +332,7 @@ const Profile = () => {
                             type="number"
                           />
                         </FormGroup>
-                      </Col>
+                      </Col> */}
                     </Row>
                   </div>
                   <hr className="my-4" />

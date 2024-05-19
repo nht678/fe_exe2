@@ -12,7 +12,6 @@ const apiClient = axios.create({
 
 const timeoutWaitForLastVoice = 700;
 const durationRequiredUserInput = 600;
-
 function App() {
   // The player ref, to access the audio player.
   const playerRef = React.useRef(null);
