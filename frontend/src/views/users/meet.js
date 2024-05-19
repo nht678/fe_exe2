@@ -6,17 +6,17 @@ import Meet from 'components/Meeting/meet.js';
 const MeetingForm = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {/* Page content */}
-      <Container className="mt--7" fluid>
-        <Row>
-          <div className="col">
-          <Card className="shadow border-0" style={{ minHeight: '680px', borderRadius: '40px' }}>
-              <Meet />
-            </Card>
-          </div>
-        </Row>
-      </Container>
+      {/* <Container className="mt--7" fluid> */}
+      <Row>
+        <div className="col">
+          {/* <Card className="shadow border-0" style={{ minHeight: '680px', borderRadius: '40px' }}> */}
+          <Meet />
+          {/* </Card> */}
+        </div>
+      </Row>
+      {/* </Container> */}
     </>
   );
 };

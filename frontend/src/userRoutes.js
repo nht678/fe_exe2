@@ -81,7 +81,7 @@ var userRoutes = [
   },
   {
     path: "/test",
-    name: "",
+    name: "voice",
     icon: "ni ni-bullet-list-67 text-red",
     component: <VoiceForm />,
     layout: "/user",
