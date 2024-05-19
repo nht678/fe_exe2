@@ -1,6 +1,7 @@
 import React from "react";
 import { RobotConfig } from "./utils";
 
+
 const timeoutForMicrophoneTestToRun = 50;
 const timeoutWaitForMicrophoneToClose = 1300;
 
@@ -143,5 +144,7 @@ export function useRobotInitiator(info, verbose, playerRef) {
           Next
         </button> &nbsp; </>}
     </p>
-  </div>];
+  </div>
+
+  ]
 }

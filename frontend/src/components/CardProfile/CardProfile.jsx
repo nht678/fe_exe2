@@ -4,7 +4,7 @@ import { Avatar, Space, Image } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 const CardProfile = () => {
     return (
-        <Col span={4} style={{ display: "flex", flexDirection: 'column', marginTop: "5%" }}>
+        <Col span={5} style={{ display: "flex", flexDirection: 'column', marginTop: "5%" }}>
 
 
             <div style={{ backgroundColor: "#dce2ee", borderRadius: "5%" }}>
