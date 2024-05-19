@@ -2,11 +2,17 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
 // import { Button, Input, Space, Checkbox, message } from "antd";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+// import Row from "react-bootstrap/Row";
+// import Col from "react-bootstrap/Col";
+import { Col, Row } from 'antd';
 import Button from 'react-bootstrap/Button';
 import PaymentProfileCard from '../ProfileCard/PaymentProfileCard';
 import QuickStart from 'components/ProfileCard/QuickStart';
+import { UserOutlined } from '@ant-design/icons';
+import { Avatar, Space, Image } from 'antd';
+
+import CardProfile from "../CardProfile/CardProfile.jsx"
+
 
 function Meet() {
   const [username, setUsername] = useState('');
@@ -85,9 +91,9 @@ function Meet() {
         }
       `}</style>
       <Row >
-        <Col style={{ justifyContent: "center", top: "20rem", display: "flex"}} md={8}>
+        <Col span={19} style={{ justifyContent: "center", top: "10rem", display: "flex" }} >
           <div>
-            {!loading && <Button  variant="outline-primary" onClick={startConnection}>Start</Button>}
+            {!loading && <Button variant="outline-primary" onClick={startConnection}>Start</Button>}
             {loading &&
               <>
                 <Row style={{ marginBottom: "1rem" }} className="loader"></Row>
@@ -97,18 +103,79 @@ function Meet() {
             }
           </div>
         </Col>
-        <Col md={4} style={{display: "flex", flexDirection:'column'}}>
-            <div>
-            <PaymentProfileCard
-              avatar="https://png.pngtree.com/png-vector/20231019/ourmid/pngtree-user-profile-avatar-png-image_10211467.png"
-              name="Annie Leonchart"
-              email="annie_leonchart@mail.com"
-              lessons={24}
-              credits="$1"
-            />
+        {/* <PaymentProfileCard
+            avatar="https://png.pngtree.com/png-vector/20231019/ourmid/pngtree-user-profile-avatar-png-image_10211467.png"
+            name="Annie Leonchart"
+            email="annie_leonchart@mail.com"
+            lessons={24}
+            credits="$1"
+          />
+          <QuickStart /> */}
+        {/* <Col span={4} style={{ display: "flex", flexDirection: 'column' }}>
+
+
+          <div style={{ backgroundColor: "#dce2ee", borderRadius: "5%" }}>
+            <Row style={{ justifyContent: "center" }}>  <Avatar style={{ backgroundColor: "blueviolet" }} src="https://api.dicebear.com/7.x/miniavs/svg?seed=1" size={64} icon={<UserOutlined />} /></Row>
+            <div style={{ height: "7rem", color: "black" }}>
+              <Row style={{ justifyContent: "center" }}>Minh la ...</Row>
+              <Row style={{ justifyContent: "center" }}>hello12345@gmail.conm</Row>
+              <Row style={{ justifyContent: "space-around" }}>
+                <Col style={{ justifyContent: "center" }}>
+                  <Row style={{ justifyContent: "center" }}>
+                    Lessons
+                  </Row>
+                  <Row style={{ justifyContent: "center" }}>
+                    24
+                  </Row>
+                </Col>
+                <Col>
+                  <Row style={{ justifyContent: "center" }}>
+                    Credits
+                  </Row>
+                  <Row style={{ justifyContent: "center" }}>
+                    1$
+                  </Row>
+                </Col>
+              </Row>
+            </div>
           </div>
-          <div><QuickStart/></div>
-        </Col>
+          <div >
+            <Row><h1>Quick Start</h1></Row>
+            <Row style={{ backgroundColor: "#f0f0f0", height: "5rem", borderRadius: "5%", marginBottom: "4%" }}>
+              <Col style={{ margin: "5%" }}>
+                <img style={{ borderRadius: "5%", width: "50px", height: "50px" }} src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png" >
+                </img>
+              </Col>
+              <Col style={{ justifyContent: "center", display: "flex", flexDirection: "column", color: "black" }}>
+                <Row>Taking now</Row>
+                <Row>30 minute</Row>
+              </Col>
+            </Row>
+            <Row style={{ backgroundColor: "#f0f0f0", height: "5rem", borderRadius: "5%", marginBottom: "4%", color: "black" }}>
+              <Col style={{ margin: "5%" }}>
+                <img style={{ borderRadius: "5%", width: "50px", height: "50px" }} src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png" >
+                </img>
+              </Col>
+              <Col style={{ justifyContent: "center", display: "flex", flexDirection: "column" }}>
+                <Row>Taking now</Row>
+                <Row>30 minute</Row>
+              </Col>
+            </Row>
+            <Row style={{ backgroundColor: "#f0f0f0", height: "5rem", borderRadius: "5%", marginBottom: "4%", color: "black" }}>
+              <Col style={{ margin: "5%" }}>
+                <img style={{ borderRadius: "5%", width: "50px", height: "50px" }} src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png" >
+                </img>
+              </Col>
+              <Col style={{ justifyContent: "center", display: "flex", flexDirection: "column" }}>
+                <Row>Taking now</Row>
+                <Row>30 minute</Row>
+              </Col>
+            </Row>
+
+
+          </div>
+        </Col> */}
+        <CardProfile />
       </Row>
     </div>
 
