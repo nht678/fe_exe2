@@ -18,14 +18,14 @@ var userRoutes = [
   {
     path: "/dashboard",
     name: "Dasboard",
-    icon: "ni ni-planet text-blue",
+    icon: "ni ni-tv-2 text-green",
     component: <Icons />,
     layout: "/user",
   },
   {
     path: "/explore",
     name: "Explore",
-    icon: "ni ni-spaceship text-red",
+    icon: "ni ni-planet text-blue",
     component: <Icons />,
     layout: "/user",
   },
@@ -90,7 +90,7 @@ var userRoutes = [
   {
     path: "/history",
     name: "Learning history",
-    icon: "ni ni-archive-2 text-black",
+    icon: "ni ni-single-copy-04 text-black",
     component: <LearningHistoryFrom />,
     layout: "/user",
   },

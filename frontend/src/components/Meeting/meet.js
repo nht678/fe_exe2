@@ -175,7 +175,7 @@ function Meet() {
 
           </div>
         </Col> */}
-        <CardProfile />
+        {/* <CardProfile /> */}
       </Row>
     </div>
 
