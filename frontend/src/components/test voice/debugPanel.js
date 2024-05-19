@@ -1,5 +1,5 @@
 import React from "react";
-import {buildLog} from "./utils";
+import { buildLog } from "./utils";
 
 export function useDebugPanel(playerRef) {
   // Verbose(detail) and info(summary) logs, show in the log panel.
@@ -23,7 +23,7 @@ export function useDebugPanel(playerRef) {
       last.msg = `${last.msg} ${msg}`;
       ref.current.infoLogs = [...ref.current.infoLogs];
     } else {
-      ref.current.infoLogs = [...ref.current.infoLogs, {label, msg}];
+      ref.current.infoLogs = [...ref.current.infoLogs, { label, msg }];
     }
 
     setInfoLogs(ref.current.infoLogs);
@@ -56,7 +56,7 @@ export function useDebugPanel(playerRef) {
   }, [verbose, playerRef]);
 
   return [info, verbose, showVerboseLogs, <React.Fragment>
-    <div style={{textAlign: 'right'}}>
+    {/* <div style={{ textAlign: 'right' }}>
       <button onClick={(e) => {
         verbose(`Set debugging to ${!showVerboseLogs}`);
         setShowVerboseLogs(!showVerboseLogs);
@@ -71,7 +71,7 @@ export function useDebugPanel(playerRef) {
         }}>Welcome audio</button> &nbsp;
         <a href="https://github.com/ossrs/ai-talk/discussions" target='_blank' rel='noreferrer'>Help me!</a>
       </>}
-    </div>
+    </div> */}
     <div className={sharing ? 'LogPanelLong' : 'LogPanel'}>
       <div>
         {showVerboseLogs && verboseLogs.map((log, index) => {
@@ -82,12 +82,12 @@ export function useDebugPanel(playerRef) {
           const bot = log.label === 'bot';
           const color = you ? 'darkgreen' : (bot ? 'darkblue' : '');
           const fontWeight = you ? 'bold' : 'normal';
-          const msg = log.msg ? log.msg : index === infoLogs.length - 1 ? <div><br/><b>Loading...</b></div> : <br/>;
-          const prefix = log.msg && log.label ? `${{'sys':'System', 'user':'You', 'bot':'Bot'}[log.label]}: ` : '';
-          return (<div key={index} style={{color,fontWeight}}>{prefix}{msg}</div>);
+          const msg = log.msg ? log.msg : index === infoLogs.length - 1 ? <div><br /><b>Loading...</b></div> : <br />;
+          const prefix = log.msg && log.label ? `${{ 'sys': 'System', 'user': 'You', 'bot': 'Bot' }[log.label]}: ` : '';
+          return (<div key={index} style={{ color, fontWeight }}>{prefix}{msg}</div>);
         })}
       </div>
-      <div style={{ float:"left", clear: "both" }} ref={logPanelRef}/>
+      <div style={{ float: "left", clear: "both" }} ref={logPanelRef} />
     </div>
   </React.Fragment>];
 }

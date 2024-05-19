@@ -15,7 +15,7 @@ import Register from "components/register"
 import Homepage from "components/Homepage/Homepage.jsx"
 
 import App from "components/test voice/App.js"
-import AIProununciationTrainer from "components/pronouce2/templates/main.jsx"
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -26,7 +26,6 @@ root.render(
       <Route path="/homepage" element={<Homepage />} />
 
       <Route path="/test" element={<App />} />
-      <Route path="test1" element={<AIProununciationTrainer />} />
 
 
       <Route path="/admin/*" element={<AdminLayout />} />

@@ -20,6 +20,7 @@ import { useState } from "react";
 import { NavLink as NavLinkRRD, Link } from "react-router-dom";
 // nodejs library to set properties for components
 import { PropTypes } from "prop-types";
+import yourImage from '../../assets/images/Image4.png';
 
 // reactstrap components
 import {
@@ -118,10 +119,10 @@ const Sidebar = (props) => {
         {/* Brand */}
         {logo ? (
           <NavbarBrand className="pt-0" {...navbarBrandProps}>
-            <img
+            <img style={{ maxHeight: "5rem" }}
               alt={logo.imgAlt}
               className="navbar-brand-img"
-              src={logo.imgSrc}
+              src={yourImage}
             />
           </NavbarBrand>
         ) : null}

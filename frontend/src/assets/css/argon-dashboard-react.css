@@ -17683,7 +17683,7 @@ textarea[resize="horizontal"] {
   padding-bottom: 1rem;
 }
 .navbar-vertical.navbar-expand-xs .navbar-brand-img {
-  max-height: 2.5rem;
+  max-height: 5rem;
 }
 .navbar-vertical.navbar-expand-xs .navbar-user {
   margin-left: -1.5rem;
@@ -17776,7 +17776,7 @@ textarea[resize="horizontal"] {
     padding-bottom: 1rem;
   }
   .navbar-vertical.navbar-expand-sm .navbar-brand-img {
-    max-height: 2.5rem;
+    max-height: 5rem;
   }
   .navbar-vertical.navbar-expand-sm .navbar-user {
     margin-left: -1.5rem;
@@ -17869,9 +17869,9 @@ textarea[resize="horizontal"] {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-  .navbar-vertical.navbar-expand-md .navbar-brand-img {
+  /* .navbar-vertical.navbar-expand-md .navbar-brand-img {
     max-height: 2.5rem;
-  }
+  } */
   .navbar-vertical.navbar-expand-md .navbar-user {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
