@@ -46,7 +46,23 @@ const AdminNavbar = (props) => {
   }, []);
 
   return (
+
     <>
+      {/* 
+      <style>
+        {`
+  .hello{
+    align-items: stretch;
+    display: flex;
+   
+  }
+  .hello i {
+    align-items: center;
+    display: flex;
+    margin-right:2rem;
+  }
+  `}
+      </style> */}
       <Navbar className="navbar-top navbar-dark" expand="md" id="navbar-main">
         <Container fluid>
           {/* <Link
@@ -81,11 +97,11 @@ const AdminNavbar = (props) => {
                     <span className="mb-0 text-sm font-weight-bold">
                       {data.username}
                     </span>
-                    <br></br>  
+                    <br></br>
                     <span className="mb-0 text-sm font-weight-bold text-dark">
                       Balance: ${data.balance}
                     </span>
-                  
+
                   </Media>
                 </Media>
               </DropdownToggle>
@@ -93,24 +109,24 @@ const AdminNavbar = (props) => {
                 <DropdownItem className="noti-title" header tag="div">
                   <h6 className="text-overflow m-0">Welcome!</h6>
                 </DropdownItem>
-                <DropdownItem to="/user/user-profile" tag={Link}>
+                <DropdownItem to="/user/user-profile" className="hello" tag={Link}>
                   <i className="ni ni-single-02" />
                   <span>My profile</span>
                 </DropdownItem>
-                <DropdownItem to="/user/user-profile" tag={Link}>
+                <DropdownItem to="/user/user-profile" className="hello" tag={Link}>
                   <i className="ni ni-settings-gear-65" />
                   <span>Settings</span>
                 </DropdownItem>
-                <DropdownItem to="/user/user-profile" tag={Link}>
+                <DropdownItem to="/user/user-profile" className="hello" tag={Link}>
                   <i className="ni ni-calendar-grid-58" />
                   <span>Activity</span>
                 </DropdownItem>
-                <DropdownItem to="/user/user-profile" tag={Link}>
+                <DropdownItem to="/user/user-profile" className="hello" tag={Link}>
                   <i className="ni ni-support-16" />
                   <span>Support</span>
                 </DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                <DropdownItem href="#pablo" className="hello" onClick={(e) => e.preventDefault()}>
                   <i className="ni ni-user-run" />
                   <span>Logout</span>
                 </DropdownItem>

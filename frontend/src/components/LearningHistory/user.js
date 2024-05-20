@@ -61,7 +61,7 @@ function UserMeetings() {
 
     return (
         <div>
-            <h2>Meeting History</h2>
+            <h2 style={{ marginBottom: "3%" }}>Meeting History</h2>
             <Table striped bordered hover>
                 <thead>
                     <tr>
@@ -98,33 +98,33 @@ function UserMeetings() {
                     <Modal.Title>Rate Tutor</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                <Form onSubmit={handleSubmit(onSubmit)}>
-                    <Form.Group controlId="rating">
-                        <Form.Label>Your Rating</Form.Label>
-                        <ReactStars
-                            count={5}
-                            onChange={(newRating) => {
-                                setValue("user_rating", newRating);  // setValue is from react-hook-form
-                            }}
-                            size={24}
-                            activeColor="#ffd700"
-                        />
-                    </Form.Group>
+                    <Form onSubmit={handleSubmit(onSubmit)}>
+                        <Form.Group controlId="rating">
+                            <Form.Label>Your Rating</Form.Label>
+                            <ReactStars
+                                count={5}
+                                onChange={(newRating) => {
+                                    setValue("user_rating", newRating);  // setValue is from react-hook-form
+                                }}
+                                size={24}
+                                activeColor="#ffd700"
+                            />
+                        </Form.Group>
 
-                    <Form.Group controlId="reviewText">
-                        <Form.Label>Your Feedback</Form.Label>
-                        <Form.Control as="textarea" rows={3} {...register("user_feedback")} />
-                    </Form.Group>
+                        <Form.Group controlId="reviewText">
+                            <Form.Label>Your Feedback</Form.Label>
+                            <Form.Control as="textarea" rows={3} {...register("user_feedback")} />
+                        </Form.Group>
 
-                    <Form.Group controlId="userSuggest">
-                        <Form.Label>User Suggestion</Form.Label>
-                        <Form.Control as="textarea" rows={3} {...register("user_suggest")} />
-                    </Form.Group>
+                        <Form.Group controlId="userSuggest">
+                            <Form.Label>User Suggestion</Form.Label>
+                            <Form.Control as="textarea" rows={3} {...register("user_suggest")} />
+                        </Form.Group>
 
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
-                </Form>
+                        <Button variant="primary" type="submit">
+                            Submit
+                        </Button>
+                    </Form>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
