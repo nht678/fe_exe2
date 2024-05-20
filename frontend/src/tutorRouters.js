@@ -6,27 +6,28 @@ import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
-import NewDashboard from "views/examples/NewDashboard.js";
+import TutorDashboardForm from "views/tutors/dashboard.js";
 import CVForm from "views/tutors/cv.js"
 import MeetingForm from 'views/tutors/meeting.js' 
 import TutorWithdrawForm from "views/tutors/payment";
 import TutorLearningHistoryFrom from "views/tutors/leaninghistory.js"
+import TutorMeetingRoomForm from "views/tutors/room.js"
 
 var tutorRoutes = [
   {
-    path: "/new-dashboard",
-    name: "New Dashboard",
+    path: "/dashboard",
+    name: "Dashboard",
     icon: "ni ni-tv-2 text-green",
-    component: <NewDashboard />,
+    component: <TutorDashboardForm />,
     layout: "/tutor",
   },
-  {
-    path: "/explore",
-    name: "Explore",
-    icon: "ni ni-planet text-blue",
-    component: <Icons />,
-    layout: "/tutor",
-  },
+  // {
+  //   path: "/explore",
+  //   name: "Explore",
+  //   icon: "ni ni-planet text-blue",
+  //   component: <Icons />,
+  //   layout: "/tutor",
+  // },
   {
     path: "/matching",
     name: "Talking Now",
@@ -38,21 +39,21 @@ var tutorRoutes = [
     path: "/meeting",
     name: "Meeting",
     icon: "ni ni-laptop text-purple",
-    component: <Profile />,
+    component: <TutorMeetingRoomForm />,
     layout: "/tutor",
   },
-  {
-    path: "/schedule",
-    name: "Schedule",
-    icon: "ni ni-calendar-grid-58 text-brown",
-    component: <Profile />,
-    layout: "/tutor",
-  },
+  // {
+  //   path: "/schedule",
+  //   name: "Schedule",
+  //   icon: "ni ni-calendar-grid-58 text-brown",
+  //   component: <Profile />,
+  //   layout: "/tutor",
+  // },
   {
     path: "/profile",
     name: "Profile",
     icon: "ni ni-circle-08 text-blue",
-    component: <Tables />,
+    component: <Profile />,
     layout: "/tutor",
   },
 
@@ -72,7 +73,7 @@ var tutorRoutes = [
   },
   {
     path: "/history",
-    name: "Learning History",
+    name: "Teached History",
     icon: "ni ni-single-copy-04 text-black",
     component: <TutorLearningHistoryFrom />,
     layout: "/tutor",

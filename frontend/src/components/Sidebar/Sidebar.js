@@ -231,9 +231,9 @@ const Sidebar = (props) => {
           {/* Navigation */}
           <Nav navbar>{createLinks(routes)}</Nav>
           {/* Divider */}
-          <hr className="my-3" />
+          {/* <hr className="my-3" /> */}
           {/* Heading */}
-          <h6 className="navbar-heading text-muted">Documentation</h6>q
+          {/* <h6 className="navbar-heading text-muted">Documentation</h6>q */}
 
         </Collapse>
       </Container>

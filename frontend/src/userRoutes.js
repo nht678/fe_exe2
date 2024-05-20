@@ -6,12 +6,13 @@ import Register from "views/examples/Register.js";
 import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 import Icons from "views/examples/Icons.js";
-import NewDashboard from "views/examples/NewDashboard.js";
+import NewDashboardForm from "views/users/dashboard.js"
 import UserPaymentForm from "views/users/payment.js"
 import GrammarForm from "views/users/grammar.js"
 import MeetingForm from "views/users/meet.js"
 import VoiceForm from "views/users/voice.js"
 import LearningHistoryFrom from "views/users/learninghistory.js"
+import UserMeetingRoomForm from "views/users/room.js"
 
 
 var userRoutes = [
@@ -19,23 +20,23 @@ var userRoutes = [
     path: "/dashboard",
     name: "Dasboard",
     icon: "ni ni-tv-2 text-green",
-    component: <Icons />,
+    component: <NewDashboardForm />,
     layout: "/user",
   },
-  {
-    path: "/explore",
-    name: "Explore",
-    icon: "ni ni-planet text-blue",
-    component: <Icons />,
-    layout: "/user",
-  },
-  {
-    path: "/find-tutor",
-    name: "Find a tutor",
-    icon: "ni ni-active-40 text-yellow",
-    component: <MeetingForm />,
-    layout: "/user",
-  },
+  // {
+  //   path: "/explore",
+  //   name: "Explore",
+  //   icon: "ni ni-planet text-blue",
+  //   component: <Icons />,
+  //   layout: "/user",
+  // },
+  // {
+  //   path: "/find-tutor",
+  //   name: "Find a tutor",
+  //   icon: "ni ni-active-40 text-yellow",
+  //   component: <MeetingForm />,
+  //   layout: "/user",
+  // },
   {
     path: "/match",
     name: "Talking Now",
@@ -47,16 +48,16 @@ var userRoutes = [
     path: "/meeting",
     name: "Meeting",
     icon: "ni ni-laptop text-purple",
-    component: <Profile />,
+    component: <UserMeetingRoomForm />,
     layout: "/user",
   },
-  {
-    path: "/schedule",
-    name: "Schedule",
-    icon: "ni ni-calendar-grid-58 text-brown",
-    component: <Profile />,
-    layout: "/user",
-  },
+  // {
+  //   path: "/schedule",
+  //   name: "Schedule",
+  //   icon: "ni ni-calendar-grid-58 text-brown",
+  //   component: <Profile />,
+  //   layout: "/user",
+  // },
 
   {
     path: "/grammar",
@@ -66,10 +67,17 @@ var userRoutes = [
     layout: "/user",
   },
   {
+    path: "/aitalk",
+    name: "Talk With AI",
+    icon: "ni ni-headphones text-pink",
+    component: <VoiceForm />,
+    layout: "/user",
+  },
+  {
     path: "/profile",
     name: "Profile",
     icon: "ni ni-circle-08 text-blue",
-    component: <Tables />,
+    component: <Profile />,
     layout: "/user",
   },
   {
@@ -79,13 +87,7 @@ var userRoutes = [
     component: <UserPaymentForm />,
     layout: "/user",
   },
-  {
-    path: "/test",
-    name: "voice",
-    icon: "ni ni-headphones text-pink",
-    component: <VoiceForm />,
-    layout: "/user",
-  },
+
 
   {
     path: "/history",

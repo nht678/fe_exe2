@@ -5,10 +5,10 @@
   border-radius:50%;
   width:10em; height:10em;
 }
-:before, :after{
+/* :before, :after{
   content:'';
   position:absolute;
-}
+} */
 .gn:after, .gn-active:after {
   top:30%; left:43%;
   height:15%; width:14%;

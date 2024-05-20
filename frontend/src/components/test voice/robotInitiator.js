@@ -121,10 +121,7 @@ export function useRobotInitiator(info, verbose, playerRef) {
     {!booting && !allowed && <p style={{ color: "red" }}>
       Error: Only allow localhost or https to access microphone.
     </p>}
-    <p>
-      <a href='https://github.com/ossrs/ai-talk/discussions' target='_blank' rel='noreferrer'>Github</a> &nbsp;
-      <a href='https://discord.gg/q29TwKwC2C' target='_blank' rel='noreferrer'>Discord</a>
-    </p>
+
     <p>
       {availableRobots?.length ? <React.Fragment>
         Assistant: &nbsp;

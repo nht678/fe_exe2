@@ -18,34 +18,34 @@ import AdminLearningHistoryFrom from "views/admin/learninghistory.js"
 
 var adminRoutes = [
   {
-    path: "/new-dashboard",
-    name: "New Dashboard",
+    path: "/dashboard",
+    name: "Dashboard",
     icon: "ni ni-tv-2 text-green",
     component: <NewDashboard />,
     layout: "/admin",
   },
-  {
-    path: "/explore",
-    name: "Explore",
-    icon: "ni ni-planet text-blue",
-    component: <Icons />,
-    layout: "/admin",
-  },
+  // {
+  //   path: "/explore",
+  //   name: "Explore",
+  //   icon: "ni ni-planet text-blue",
+  //   component: <Icons />,
+  //   layout: "/admin",
+  // },
   
-  {
-    path: "/meeting",
-    name: "Meeting",
-    icon: "ni ni-laptop text-purple",
-    component: <Profile />,
-    layout: "/admin",
-  },
-  {
-    path: "/schedule",
-    name: "Schedule",
-    icon: "ni ni-calendar-grid-58 text-brown",
-    component: <Profile />,
-    layout: "/admin",
-  },
+  // {
+  //   path: "/meeting",
+  //   name: "Meeting",
+  //   icon: "ni ni-laptop text-purple",
+  //   component: <Profile />,
+  //   layout: "/admin",
+  // },
+  // {
+  //   path: "/schedule",
+  //   name: "Schedule",
+  //   icon: "ni ni-calendar-grid-58 text-brown",
+  //   component: <Profile />,
+  //   layout: "/admin",
+  // },
   {
     path: "/users",
     name: "User Management",

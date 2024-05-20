@@ -17,9 +17,16 @@
     .dropdown-item {
         padding: .5rem 1rem;
         font-size: $font-size-sm;
-        > i,
+        align-items: stretch;
+        display: flex;
+        margin-right: 1.5rem;
+        > i{
+            align-items: center;
+            display: flex;
+            margin-right: 1.5rem;
+        }
         > svg {
-            margin-right: 1rem;
+            margin-right: 1.5rem;
             font-size: 1rem;
             vertical-align: -17%;
         }
