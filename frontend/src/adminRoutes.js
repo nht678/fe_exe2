@@ -21,7 +21,7 @@ var adminRoutes = [
     path: "/dashboard",
     name: "Dashboard",
     icon: "ni ni-tv-2 text-green",
-    component: <NewDashboard />,
+    component: <Index />,
     layout: "/admin",
   },
   // {

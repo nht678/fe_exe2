@@ -14,7 +14,7 @@ var routes = [
     path: "/dashboard",
     name: "Dashboard",
     icon: "ni ni-tv-2 text-primary",
-    component: <NewDashboard />,
+    component: <Index />,
     layout: "/admin",
   },
   // {

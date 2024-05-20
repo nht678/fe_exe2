@@ -11,8 +11,8 @@ const VoiceForm = () => {
       {/* Page content */}
       <Container className="mt--7" fluid>
         <Row>
-          <div className="col">
-          <Card className="shadow border-0" style={{ minHeight: '500px' }}>
+        <div className="col" style={{ marginTop: '5%' }}>
+          <Card className="shadow border-0" style={{ minHeight: '500px', borderRadius: '20px' }}>
               <App />
             </Card>
           </div>

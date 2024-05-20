@@ -13,7 +13,7 @@ import MeetingForm from "views/users/meet.js"
 import VoiceForm from "views/users/voice.js"
 import LearningHistoryFrom from "views/users/learninghistory.js"
 import UserMeetingRoomForm from "views/users/room.js"
-
+import RedirectComponent from "views/users/pronounce.js"
 
 var userRoutes = [
   {
@@ -71,6 +71,13 @@ var userRoutes = [
     name: "Talk With AI",
     icon: "ni ni-headphones text-pink",
     component: <VoiceForm />,
+    layout: "/user",
+  },
+  {
+    path: "/pronounce",
+    name: "Pronunciation",
+    icon: "ni ni-planet text-blue",
+    component: <RedirectComponent />,
     layout: "/user",
   },
   {

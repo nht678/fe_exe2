@@ -10,8 +10,8 @@ const UserMeetingRoomForm = () => {
       {/* Page content */}
       <Container className="mt--7" fluid>
         <Row>
-          <div className="col">
-          <Card className="shadow border-0" style={{ minHeight: '700px' }}>
+        <div className="col" style={{ marginTop: '5%' }}>
+          <Card className="shadow border-0" style={{ minHeight: '700px', borderRadius: '20px' }}>
               <UserMeetingRoom />
             </Card>
           </div>
